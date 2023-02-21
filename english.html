@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+   <script src="https://use.fontawesome.com/c57e6c6460.js"></script>
+   <scrip src="https://code.jquery.com/jquery-3.3.1.js"></scrip>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+</head>
+<style type="text/css">
+body{margin:0 }
+ .slider_container1 {
+  margin: 30px auto;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  border: 20px solid;
+  border-color: #fff;
+  border-bottom-width: 100px;
+  background-color: #f5f5f5;
+  box-shadow: #666 0 0 5px;
+  box-sizing: content-box;
+}
+.slider_container1 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-animation: round 10s linear infinite;
+  animation: round 10s linear infinite;
+}
+.slider_container1 .b_image {
+  width: 100%;
+  max-height: 700px;
+  display: block;
+}
+.slider_container1 img{width: 100%;height: 700px;}
+@-webkit-keyframes round {
+  10% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 0 - 1秒 淡入*/
+  }
+  55% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 1- 5秒靜止*/
+  }
+  60% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /* 5-6秒淡出*/
+  }
+}
+@keyframes round {
+  10% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 0 - 1秒 淡入*/
+  }
+  55% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* 1- 5秒靜止*/
+  }
+  60% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /* 5-6秒淡出*/
+  }
+}
+.slider_container1 div:nth-child(5) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.slider_container1 div:nth-child(4) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+.slider_container1 div:nth-child(3) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.slider_container1 div:nth-child(2) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.slider_container1 div:nth-child(1) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+.slider_container1 span {
+  color: #000;
+  background: #fff;
+  position: absolute;
+  left: 0%;
+  top: 700px;
+  width: 100%;
+  height: 100px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.rwd_slider_container1_wrapper {
+	position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 700px;
+  
+  margin: 0 auto;
+}
+.rwd_slider_container1 {
+	
+  position: relative;
+    
+  display: block;
+  max-height: 700px;
+  padding: 0;
+  box-sizing: border-box;
+  padding-bottom: 700px;
+}
+.rwd_slider_container1 .slider_container1 {
+  box-shadow: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+.rwd_slider_container1 .slider_container1 div {
+  width: 100%;
+  line-height: 0;
+}
+.rwd_slider_container1 .slider_container1 span {
+  top: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rwd_slider_container1_wrapper p{color: white;font-family: MS Sans Serif}
+.rwd_slider_container1_wrapper h3{color: white;font-size: 40px;font-family: Arial Black;line-height: 1}
+.wel_intro{ position: absolute;bottom:  45%;left:45%;z-index: 2;transform: translate(-45%,45%)}
+
+
+.introduction{height: 1200px;background:#ffffff;text-align: center;
+  
+}
+.intro{height: 300px}
+.introduction p#intro_p{color:#797979;line-height: 1.2;font-family: MS Sans Serif;font-weight: bold;
+}
+.academic{position: relative;width: 100%;height: 900px}
+.academic_units{width:30%;height:600px;background-color:white;z-index: 1;margin: 0%;box-shadow: 5px 6px 12px #969696;font-family: MS Sans Serif; border-top: #29acc0 solid 5px;box-sizing:border-box; position: absolute;
+}
+.academic_units h2{font-size: 1.5em;color:#228e9e;font-weight: bolder;}
+.academic_units img{
+ max-height: 40%;width: 100%;
+}
+.academic_units div{width: 100%;   
+}
+
+
+.academic_units div ul{list-style: none;padding: 0;}
+.academic_units div li{list-style:none;text-align:center;padding: 1.4%;border-bottom:#eaeaea solid 1px;}
+.academic_units div li a {text-decoration: none;color:#808588;line-height: 1.3;font-size: 0.9em;}
+.academic_units div li:hover{background-color:#e2e2e28a ;}
+.adminssion {position: relative;text-align: center;
+height: 450px;background:#eaeaea;
+}
+.header1{width:100%;background: white;height: 80px;}
+.fa{ position: absolute; right: 1%;bottom:10px;}
+.link{float: left;min-width: 30%;height: 5%;font-weight: bold;z-index: 2;border-width: 1.3px;border-style: solid;border-color: white;text-align: center;box-sizing: border-box;margin:0 5% 5% 0 }
+.link a{color: white;line-height:2.2;text-decoration: none;font-family: sans-serif;}
+.link:hover{border-color:#29acc0 }
+
+.adminssion_content{float: left;margin:  2.5%;text-align: center;
+
+width: 15%;color: #000000;font-size: 1.5em;
+
+height:200px;font-family: verdana}
+
+
+.circle {background-color: #29acc0;margin: 0 auto;
+
+width: 150px;
+
+height:150px;
+
+
+
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+-webkit-border-radius: 50%;
+
+}
+.circle img{padding: 38px;width: 50%;filter:invert(100%)}
+.circle:hover{background-color:#4d5861;}
+
+
+.taitung_content{background: #f7f7f7;text-align: left;overflow: hidden;width: auto;box-shadow: 5px 6px 12px #969696;height: 350px;margin: 8%;}
+
+.taitung_1{float: left;width: 40%;height:100%;}
+.taitung_2{float: left;width: 60%;height:100%;}
+.tt{padding:  16%;}
+.taitung_content .tt_link{float: left;padding: 0% 4%;margin: 4% 4% ;height: 60px; -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;    color: white;
+    font-weight: bold;
+    line-height: 3;
+    font-size: 1.2em;text-decoration: none;box-shadow: 5px 4px 0px 0px #636363}
+.tt_link:hover{box-shadow: 1px 1px 0px 0px  #636363 ;transform: translate(5px,4px);  }
+
+.quarter_circle{   
+  -webkit-clip-path: circle(122% at 101% -44%);
+  clip-path: circle(122% at 101% -44%);background-image: url("https://english.nttu.edu.tw/var/file/13/1013/img/1739/taitung.jpg");
+  ; background-repeat: no-repeat;background-size: cover;width: 100%;height: 350px;
+}
+  
+
+
+.administration{background:#ffffff;height: 300px;text-align: center;padding: 3%;
+
+}
+.administration_content{float: left;width: 30%;margin: 0 1.66%;}
+.administration_content ul{list-style-type:none;border-left: #ececec solid 3px;box-sizing:border-box;}
+.administration_content ul li{height: auto;text-align: left;margin: 5% 0;}
+.administration_content ul li a{max-width: 75%;text-decoration: none;color:#3d515a;font-family: MS Sans Serif;font-size: 0.9em;}
+.administration_content ul li a:hover{color:#2cadc1;}
+.frame{height: 550px;text-align: center;margin:8%; box-shadow: 5px 6px 12px #969696;}
+
+@media only screen and (min-width: 2000px) {
+.introduction{height: 1400px;}
+.intro{height: 400px;}
+.academic{height:1000px;}
+.academic_units{height: 750px}
+
+.adminssion{height:600px;}
+.adminssion_content{width: 20%;margin: auto;height: auto;}
+
+.administration{height: 450px;}
+.frame{height: 700px}
+}
+
+@media only screen and (max-width: 1000px) {
+.slider_container1 .b_image{min-height:700px;}
+.taitung_1,.taitung_2{height: 300px;}
+
+.quarter_circle{clip-path:none;}
+}
+@media only screen and (max-width: 800px) {
+
+.introduction{height: 2400px;}
+.intro{height: 400px;}
+.academic{height:2000px;}
+.academic_units{width:70%;position: static;margin: 4% auto;}
+
+
+
+.adminssion{height:550px;}
+.adminssion_content{width: 25%;margin: auto;height: auto;}
+
+.taitung_content{height: 350px}
+
+.frame{height: 350px}
+}
+
+
+@media only screen and (max-width:700px) {
+.rwd_slider_container1,.rwd_slider_container1 .slider_container1 ,.slider_container1 img,.rwd_slider_container1_wrapper{height: 500px;max-height: none;padding-bottom: 0}
+.rwd_slider_container1_wrapper{overflow: auto;}
+.slider_container1 .b_image{min-height:500px;}
+.rwd_slider_container1_wrapper h3{font-size: 1.1em;line-height: 1; }
+.rwd_slider_container1_wrapper p{ font-size: 0.8em; }
+.wel_intro{width: 85%;padding-left: 5%;}
+
+.academic_units{width:80%;position: static;margin: 8% auto;}
+
+.adminssion_content{width: 40%;margin: 5%;}
+.adminssion{height:950px;}
+
+.administration{height: 550px;}
+.administration_content{width: 40%; margin:auto 5% ;}
+
+.taitung_content{height: 400px;margin: 0;}
+.taitung_1{height: 200px;width: 80%;margin: 0 10%;}
+.taitung_2{height: 200px;width: 80%;width: 100%}
+.tt{padding: 5%}
+.quarter_circle{background-size:100% ;height: 200px}
+.taitung_content  .tt_link{line-height:2;height: 40px;}
+.frame{height: 350px;margin: 10% 0;}
+}
+
+
+@media only screen and (max-width:400px) {
+.rwd_slider_container1,.rwd_slider_container1 .slider_container1 ,.slider_container1 img,.rwd_slider_container1_wrapper{height: 400px;max-height: none;}
+.slider_container1 .b_image{min-height:400px;}
+.rwd_slider_container1_wrapper h3{font-size: 1em;line-height: 1; }
+.rwd_slider_container1_wrapper p{ font-size: 0.5em; }
+.link{width: 95%;margin: 5% 0}
+
+
+.introduction{height: 2500px;}
+.intro{height: 500px}
+.academic_units{width:85%;position: static;margin: 8% auto;}
+
+
+.adminssion_content{width: 100%;margin:2% auto }
+.adminssion{height:1250px;}
+
+.administration{height: 750px;}
+.administration_content{width: 80%; margin: 5% 10% ;}
+
+.taitung_content{height: 400px;margin: 0;}
+.taitung_1{height: 200px;width: 80%;margin: 0 10%;}
+.taitung_content  .tt_link{font-size: 1em;line-height: 2;height: 30px}
+.frame{height: 200px;}
+}
+
+
+</style>
+<body>
+<main>
+
+
+<div class="header1" style="background: white">
+ <img src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/Mlogo.png">
+
+</div>
+
+<div class="rwd_slider_container1_wrapper">
+	<div style="width: 100%;height: 100%;margin: auto; position: absolute;top: 0%;left:0%;z-index: 2;transform: translate(-0%,0%);background:#0000005c">
+		<div class="wel_intro" >
+			<h3>Welcome to the National Taitung University</h3>
+			
+			
+<p>Whether you are a first-time visitor or a prospective student looking for educational opportunities,</p>
+
+<p>National Taitung University welcomes you all.</p>
+
+<p>If you are an international student,</p>
+
+<p>foreign scholar or university representative,</p>
+
+<p>please contact our “Center for International Affairs” for further information.</p>
+		
+		<div class="link" id="Admissions" style="background: #29acc0">
+			<a href="#a">
+			
+	
+		Admissions
+	
+			
+			</a>
+		</div>
+		<div class="link" style="background: #ffffff ">
+			<a href="https://english.nttu.edu.tw/p/412-1013-5812.php?Lang=zh-tw" style="color: black">
+			
+	
+		Academic Calendar
+			</a>
+		</div>
+	</div>
+	</div>
+	<a style="position: absolute;left:52.5%;bottom: 1%;z-index: 2;transform: translate(-52.5%, -1%);" href="#welcome">
+	</a>
+    <div class="rwd_slider_container1">
+        <div class="slider_container1">
+
+            <div >
+                <img class="b_image" src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/b3.jpg" alt="pure css slider"  >
+               
+            </div>
+            <div>
+                <img class="b_image"  src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/b4.jpg" alt="pure css slider" >
+                
+            </div>
+            <!--<div>
+                <img class="b_image" src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/b5.jpg" alt="pure css slider" width="100%" height="700" >
+               
+            </div>
+            <div>
+                <img class="b_image" src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/b6.jpg" alt="pure css slider" width="100%" height="700" >
+                
+            </div>
+            <div>
+                <img class="b_image" src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/b7.jpg" alt="pure css slider" width="100%" height="700" >
+               
+            </div>-->
+        </div><!-- end of .slider_container -->
+    </div><!-- end of .rwd_slider_container -->
+</div><!-- rwd_slider_container_wrapper-->  
+<div  class="introduction" >
+  <div class="intro">
+  <h1 style="font-family: Arial Black;color:#29acc0;font-size: 2em;padding: 2% 0 2% 0 ;margin: 0">About NTTU</h1>
+  <p id="intro_p" >
+    NTTU is a public university with more than 4,000 students, 40,000 alumni, and 728 faculty and staff.</p>
+
+  <p id="intro_p"> NTTU is the premier center of higher education in the Taitung area.</p>
+
+  <p id="intro_p">We bring groundbreaking ideas to industry and assist in the innovation and “greening” of local businesses.</p>
+  <p id="intro_p">Our award-winning faculty members are renowned for working closely with students to solve major scientiﬁc,</p>
+    <p id="intro_p">Otechnological and societal challenges.</p>
+  <p id="intro_p">We put a strong emphasis on creating things—from art to bio-energy systems.</p>
+  </p>
+  <p id="intro_p">There are four main academic units at NTTU:</p>
+  </div>
+
+  <div class="academic" >
+   
+ 
+  <div class="academic_units" style="left: 4%;top: 20%;" id="Teachers_College"> 
+    <img src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/450819294.png" >
+    <div >
+      <h2>the Teachers’ College</h2>
+      <ul>
+      <li><a href="https://wedu.nttu.edu.tw/p/404-1037-41769.php?Lang=zh-tw">
+      Department of Education</a>
+      </li>
+      <li><a href="https://wdpe.nttu.edu.tw/?Lang=en">
+      Department of Physical Education</a>
+      </li>
+      <li><a href="https://ndcde.nttu.edu.tw/?Lang=en">
+      Department of Early Childhood Education</a>
+      <li><a href="https://sped.nttu.edu.tw/p/412-1035-4350.php?Lang=zh-tw">
+      Department of Special Education</a>
+      <li><a href="https://eidm.nttu.edu.tw/">
+      Department of Education Industry and Digital Media</a>
+      <li><a href="https://soc.nttu.edu.tw/p/412-1033-9153.php?Lang=en">
+      Department of Cultural Resources and Leisure Studies</a>
+      </li>
+      <li><a href="https://bpap.nttu.edu.tw/p/412-1016-6055.php?Lang=zh-tw">
+      Bachelor's Program of Athletic Performance</a>
+      </li>
+      <li><a href="https://sect.nttu.edu.tw/p/426-1056-28.php?Lang=zh-tw">
+      Special Education Center</a>
+      </li>
+      
+    </ul>
+    </div>
+  </div>
+
+  <div class="academic_units" style="left: 36%;top: 10%;" id="Humanities">
+    <img src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/560309546.png" >
+    <div >
+      <h2>College of Humanities </h2>
+      <ul>
+      <li><a href="https://lc.nttu.edu.tw/?Lang=en">
+         Language Center</a>
+      </li>
+      <li><a href="https://doe.nttu.edu.tw/p/403-1030-953.php?Lang=zh-tw">
+        English Department</a>
+      </li>
+      <li><a href="https://music.nttu.edu.tw/p/404-1027-18379.php?Lang=zh-tw">
+        Department of Music</a>
+      </li>
+      <li><a href="https://art.nttu.edu.tw/p/404-1026-18423.php?Lang=zh-tw">
+        Department of Art Industry</a>
+      </li>
+      <li><a href="https://nice.nttu.edu.tw/p/412-1029-6027-1.php?Lang=zh-tw">
+        Graduate Institute of Children's Literature</a>
+      </li>
+      <li><a href="https://dss.nttu.edu.tw/?Lang=en">
+         Department of Somatics and Sport Leisure Industry</a>
+      </li>
+      <li><a href="https://pca.nttu.edu.tw/p/412-1028-4296.php?Lang=zh-tw">
+         Department of Public and Cultural Affairs</a>
+      </li>
+      <li><a href="https://dcll.nttu.edu.tw/?Lang=en">
+        Department of Chinese Language and Literature</a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+    </div>
+    
+  </div> 
+
+  <div class="academic_units" style="left:68%;top: 20%;" id="Science_Engineering">
+    <img src="https://english.nttu.edu.tw/var/file/13/1013/img/1739/370557801.jpg" >
+    <div>
+      <h2> College of Science and Engineering</h2>
+      <ul>
+      <li><a href="https://nils.nttu.edu.tw/p/404-1020-41585.php?Lang=zh-tw">
+       Department of Life Science</a>
+      </li>
+      <li><a href="https://se.nttu.edu.tw/index.php?Lang=en">
+        Department of Applied Science</a>
+      </li>
+      <li><a href="https://math.nttu.edu.tw/?Lang=en">
+        Department of Applied Mathematics</a>
+      </li>
+
+      <li><a href="https://wcsie.nttu.edu.tw/p/404-1022-41795.php?Lang=zh-tw">
+        Department of Computer Science and Information Engineering</a>
+      </li>
+      <li><a href="https://isms.nttu.edu.tw/p/412-1014-7814.php?Lang=zh-tw">
+       Department of Information Science and Management Systems</a>
+      </li>
+     
+      <li><a href="https://git.nttu.edu.tw/?Lang=en">
+       Interdisciplinary Program of Green and Information Technology</a>
+      </li>
+      
+    </ul>
+    </div>
+  </div> 
+
+ <!-- <div class="academic_units" style="background-color: #c1c1c1;position: absolute;right: 0%;top:10%;" id="General_Education">
+    <img src="師範.PNG" >
+    <div >
+      <h2>Center for General Education</h2>
+      <ul>
+      <li><a href="https://psn.nttu.edu.tw/p/403-1047-1731.php?Lang=zh-tw">
+        Office of Personnel Services</a>
+      </li>
+      <li><a href="https://acc.nttu.edu.tw/?Lang=en">
+         Accounting and Statistics Office</a>
+      </li>
+      <li><a href="https://wdpo.nttu.edu.tw/p/412-1004-4580.php">
+         Sports and Fitness Center</a>
+      </li>
+      
+    </ul>
+    </div>
+  </div>
+-->
+</div> 
+
+
+
+
+
+
+</div>
+ <div class="adminssion" id="welcome">
+<h1 style="font-family: Arial Black;color:#3d515a;font-size: 2em;padding: 2% 0 2% 0 ;margin: 0">ADMISSIONS</h1>
+<div class="adminssion_content" >
+	<a title="Prospectus" href="https://rd.nttu.edu.tw/p/405-1007-88609,c9048.php?Lang=zh-tw" target="_blank">
+		<div class="circle" >
+			<img src="https://english.nttu.edu.tw/var/file/13/1013/img/1756/document.png">
+		</div>
+	</a>
+	<p>Prospectus</p>
+</div>
+<div class="adminssion_content" >
+	<a title="Program" href="https://english.nttu.edu.tw/p/405-1013-43669,c5811.php?Lang=zh-tw" target="_blank">
+		<div class="circle" >
+			<img src="https://english.nttu.edu.tw/var/file/13/1013/img/1756/team.png">
+		</div>
+	</a>
+	<p>Program</p>
+</div>
+<div class="adminssion_content" >
+	<a title="Scholarship" href="https://rd.nttu.edu.tw/p/405-1007-83853,c9048.php?Lang=zh-tw" target="_blank">
+		<div class="circle" >
+			<img src="https://english.nttu.edu.tw/var/file/13/1013/img/1756/scholarship.png">
+		</div>
+	</a>
+	<p>Scholarship</p>
+</div>
+<div class="adminssion_content" >
+	<a title="Tuition" href="https://english.nttu.edu.tw/p/404-1013-40694.php?Lang=zh-tw" target="_blank">
+		<div class="circle" >
+			<img src="https://english.nttu.edu.tw/var/file/13/1013/img/1756/coin.png">
+		</div>
+	</a>
+	<p>Tuition</p>
+
+</div>
+<div class="adminssion_content" >
+	<a title="Housing" href="https://english.nttu.edu.tw/p/404-1013-222.php?Lang=zh-tw" target="_blank">
+		<div class="circle" >
+			<img src="https://english.nttu.edu.tw/var/file/13/1013/img/1756/internet.png">
+		</div>
+	</a>
+	<p>Housing</p>
+</div>
+
+
+ </div>
+
+ 
+ <div class="administration">
+ 	<h1 style="font-family: Arial Black;color:#29acc0;font-size: 2em;margin: 0 0 2% 0 ">ADMINISTRATION</h1>
+ 	<div class="administration_content">
+ 		<ul>
+ 			<li><a href="https://nenglish.nttu.edu.tw/p/404-1013-90240.php?Lang=zh-tw">
+ 				 Office of the President</a>
+ 			</li>
+ 			<li><a href="https://vpac.nttu.edu.tw/p/412-1011-1928.php?Lang=en">
+ 				Office of the Vice President</a>
+ 			</li>
+ 			<li><a href="https://sec.nttu.edu.tw/p/412-1010-83.php">
+ 				Office of Secretarial</a>
+ 			</li>
+ 			<li><a href="https://aa.nttu.edu.tw/?Lang=en">
+ 				 Office of Academic Affairs</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ 	<div class="administration_content">
+ 		<ul>
+ 			<li><a href="https://wdsa.nttu.edu.tw/p/404-1009-44976.php?Lang=zh-tw">
+ 				Office of Student Affairs</a>
+ 			</li>
+ 			<li><a href="https://dga.nttu.edu.tw/p/404-1008-43938.php?Lang=zh-tw">
+ 				Office of General Affairs</a>
+ 			</li>
+ 			<li><a href="https://rd.nttu.edu.tw/p/412-1007-4372.php?Lang=zh-tw" >
+ 				 Office of Research and  Development</a>
+ 			</li>
+ 			<li><a href="http://www.lic.nttu.edu.tw/mp.asp?mp=1"  >
+ 				  Library and Information Center</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ 	<div class="administration_content">
+ 		<ul>
+ 			<li><a href="https://psn.nttu.edu.tw/p/403-1047-1731.php?Lang=zh-tw">
+ 				Office of Personnel Services</a>
+ 			</li>
+ 			<li><a href="https://acc.nttu.edu.tw/?Lang=en">
+ 				 Accounting and Statistics Office</a>
+ 			</li>
+ 			<li><a href="https://wdpo.nttu.edu.tw/p/412-1004-4580.php">
+ 				 Sports and Fitness Center</a>
+ 			</li>
+ 			
+ 		</ul>
+ 	</div>
+ </div>
+
+
+ <div class="taitung_content">
+   
+   <div class="taitung_1" >
+    <div class="tt">
+    <h1 style="font-family: Arial Black;color:#2178b7;font-size: 2em;margin: 2%">TAITUNG LIVING</h1>
+    <div style="width: 100%;height: 100px">
+    <a title="Fun" href="https://tour.taitung.gov.tw/en" class="tt_link" target="_blank" style="background-color:#104c75">Fun</a>
+    <a title="Getting Around" href="https://tour.taitung.gov.tw/en/attraction"  target="_blank" class="tt_link" style="background-color: #000000">Getting Around</a>
+    </div>
+    </div>
+   </div>
+
+   <div class="taitung_2" >
+    <div class="quarter_circle">
+      
+    </div>
+  </div>
+ </div> 
+ <div class="frame">
+  
+   <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/Irv37WrFq08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+   </div>
+ </div>
+
+
+
+</main>
+</body>
+<script type="text/javascript">
+
+
+
+ 
+$(document).ready(function() {
+$("#Admissions").click(function() {
+$("html, body").animate({
+scrollTop: $("#welcome").offset().top }, {duration: 700,easing: "swing"});
+});
+
+});
+</script>
+</html>
